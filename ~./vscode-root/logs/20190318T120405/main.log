@@ -1,0 +1,8 @@
+[2019-03-18 12:04:06.576] [main] [info] [storage] migrating global storage from localStorage into SQLite
+[2019-03-18 12:04:06.577] [main] [info] [storage] migrated global storage
+[2019-03-18 12:04:06.580] [main] [info] update#setState idle
+[2019-03-18 12:04:36.593] [main] [info] update#setState checking for updates
+[2019-03-18 12:04:36.595] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2019-03-18 12:04:36.596] [main] [info] update#setState idle
+[2019-03-18 13:04:36.651] [main] [info] update#setState checking for updates
+[2019-03-18 13:04:39.570] [main] [info] update#setState available for download

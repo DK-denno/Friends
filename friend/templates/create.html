@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+Welcome {{user}},
+<div class="container">
+    <h1>Lets Build your questionnaire </h1>
+    <div style="width:40%">
+        <form action="{%url 'build'%}" method="POST">
+            {%csrf_token%}
+            {% for error in form.non_field_errors %}
+            <div class="form-group has-errors text-danger small">
+                {{error}}
+            </div>
+            {% endfor %}
+            {% bootstrap_form qform %}
+            {% bootstrap_form cform %}
+            {% for field in form %}
+            <div class="form-group has-errors text-danger small">
+                {{field.errors}}
+            </div>
+            <div class="form-group has-errors text-danger small">
+            </div>
+            <div class="form-group">
+                {{field}}
+            </div>
+            {% endfor %}
+            <button class="btn btn-outline-primary" style="width:100%">Submit</button>
+    </div>
+    </form>
+</div>
+{% endblock %}

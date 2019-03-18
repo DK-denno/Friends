@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+Welcome {{user}},
+<div class="container">
+   <form action="" method="">
+    {%csrf_token%}
+    {% for question in questions %}
+    {{question.question}}
+    <br>
+    <input type="radio" name="question" value="{{question.choice.choiceA}}">{{question.choice.choiceA}}<br>
+    <input type="radio" name="question" value="{{question.choice.choiceB}}">{{question.choice.choiceB}}<br>
+    <input type="radio" name="question" value="{{question.choice.choiceC}}">{{question.choice.choiceC}}<br>
+    {% endfor %}
+   </form>
+</div>
+{% endblock %}

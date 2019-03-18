@@ -1,0 +1,2 @@
+[2019-03-18 12:04:15.833] [renderer1] [info] no standard startup: not just one text editor
+[2019-03-18 12:04:15.865] [renderer1] [error] net::ERR_INTERNET_DISCONNECTED: {1}

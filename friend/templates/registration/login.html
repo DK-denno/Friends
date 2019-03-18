@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+  <div class="content" style="margin-left:400px;margin-top:100px;" >
+    <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-outline-primary mb-2" type="submit">Login</button>
+  </form>
+  <br>
+  <p><strong>-- OR --</strong></p>
+
+  <button class="btn btn-outline-primary mb-2">
+    <a  style=" color: white "href="{% url 'social_login:begin' 'facebook' %}">Login with Facebook</a>
+</button>
+
+  </div>
+{% endblock %}
